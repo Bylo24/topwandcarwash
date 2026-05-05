@@ -5,37 +5,37 @@ const services = [
     num: "01",
     icon: Home,
     title: "Domestic Carpet",
-    description: "Premium carpet supply and installation for homes of every size, with thousands of products to choose from.",
+    description: "Carpet supply and installation for homes of all sizes.",
   },
   {
     num: "02",
     icon: Layers,
     title: "Vinyl and Vinyl Planks",
-    description: "Sheet vinyl, glue down planks and herringbone styles. Durable, modern and built to last.",
+    description: "Sheet vinyl, glue-down planks, and herringbone styles.",
   },
   {
     num: "03",
     icon: Droplets,
     title: "Wet Floors",
-    description: "Slip resistant wet floor specialists. Safer showering for the elderly, wheelchair users and everyday families.",
+    description: "Slip-resistant wet floor solutions for safer bathrooms.",
   },
   {
     num: "04",
     icon: Building2,
     title: "Commercial Installations",
-    description: "Cafes, gyms, offices, salons. Sharp, clean commercial finishes with minimal disruption.",
+    description: "Commercial flooring for cafes, gyms, offices, and salons.",
   },
   {
     num: "05",
     icon: Wrench,
     title: "Subfloors and Repairs",
-    description: "Full floor prep, new subfloors and repairs. We strip it back and do it the right way the first time.",
+    description: "Floor prep, subfloors, and repair work done properly.",
   },
   {
     num: "06",
     icon: Package,
     title: "Full Supply",
-    description: "Thousands of products available. Carpet, vinyl, cork, needle punch, tiger turf, all tried and tested by our team.",
+    description: "A full supply service with carpet, vinyl, cork, needle punch, and turf.",
   },
 ];
 

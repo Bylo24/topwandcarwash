@@ -33,8 +33,8 @@ const reviews = [
   },
 ];
 
-const GoogleBadge = ({ featured = false }: { featured?: boolean }) => (
-  <span className={`inline-flex items-center gap-2 ${featured ? "text-white/55" : "text-muted-foreground"}`}>
+const GoogleBadge = () => (
+  <span className="inline-flex items-center gap-2 text-muted-foreground">
     <span
       className="relative inline-flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white"
       aria-hidden="true"
@@ -70,37 +70,31 @@ const Testimonials = () => {
         </div>
 
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
-          {reviews.map((review, index) => {
-            const featured = index === 0;
-
+          {reviews.map((review) => {
             return (
               <article
                 key={review.name}
-                className={`relative overflow-hidden rounded-2xl border ${
-                  featured
-                    ? "border-white/10 bg-neutral-950 text-white shadow-[0_20px_60px_-30px_rgba(0,0,0,0.45)]"
-                    : "border-border bg-card"
-                } p-6 sm:p-7 transition-transform duration-300 hover:-translate-y-0.5`}
+                className="relative overflow-hidden rounded-2xl border border-border bg-card p-6 sm:p-7 transition-transform duration-300 hover:-translate-y-0.5"
               >
                 <div className="flex items-center justify-between gap-4 mb-5">
-                  <div className={`flex items-center gap-1 ${featured ? "text-white" : "text-accent"}`}>
+                  <div className="flex items-center gap-1 text-accent">
                     {Array.from({ length: 5 }).map((_, starIndex) => (
                       <Star key={starIndex} size={14} fill="currentColor" strokeWidth={0} />
                     ))}
                   </div>
-                  <Quote size={22} className={featured ? "text-white/20 shrink-0" : "text-muted-foreground/20 shrink-0"} strokeWidth={1.5} />
+                  <Quote size={22} className="text-muted-foreground/20 shrink-0" strokeWidth={1.5} />
                 </div>
 
-                <p className={`text-sm sm:text-base leading-relaxed ${featured ? "text-white/90" : "text-foreground/90"}`}>
+                <p className="text-sm sm:text-base leading-relaxed text-foreground/90">
                   {review.quote}
                 </p>
 
-                <div className={`mt-6 pt-5 border-t ${featured ? "border-white/10" : "border-border"}`}>
-                  <p className={`text-xs font-semibold uppercase tracking-[0.2em] font-sans ${featured ? "text-white" : "text-muted-foreground"}`}>
+                <div className="mt-6 pt-5 border-t border-border">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] font-sans text-muted-foreground">
                     {review.name}
                   </p>
                   <div className="mt-2">
-                    <GoogleBadge featured={featured} />
+                    <GoogleBadge />
                   </div>
                 </div>
               </article>

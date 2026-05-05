@@ -41,7 +41,7 @@ const Blog = () => {
               Our Work
             </span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1] text-balance">
-              See what we’re sharing on Instagram.
+              See Our Work.
             </h2>
           </div>
           <div className="lg:col-span-4 lg:col-start-9 flex items-end">

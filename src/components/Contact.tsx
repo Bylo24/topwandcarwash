@@ -48,11 +48,8 @@ const Contact = ({ variant = "contact" }: Props) => {
         <div className="section-container">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
             <div className="lg:col-span-5">
-              <span className="text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-4 block font-sans">
-                Get a Quote
-              </span>
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1] mb-6 text-balance">
-                Turn dreams into reality.
+                Get a Quote
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8 text-sm sm:text-base">
                 We are a reputable registered company at 2 Brothers Flooring Ltd and we turn dreams into

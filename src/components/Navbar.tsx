@@ -13,9 +13,9 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/40 shadow-[0_1px_0_rgba(0,0,0,0.04)]">
-      <div className="section-container flex items-center justify-between h-14 sm:h-16 md:h-20">
+      <div className="section-container flex items-center justify-between h-16 sm:h-16 md:h-20">
         <a href="/" className="flex items-center gap-3">
-          <img src={logo} alt="2 Brothers Flooring Ltd" className="h-9 w-9 sm:h-10 sm:w-10 md:h-12 md:w-12 object-contain" />
+          <img src={logo} alt="2 Brothers Flooring Ltd" className="h-11 w-11 sm:h-10 sm:w-10 md:h-12 md:w-12 object-contain" />
           <span className="hidden sm:flex items-baseline gap-2">
             <span className="font-display text-xl md:text-2xl text-foreground leading-none">2 Brothers</span>
             <span className="font-display text-sm md:text-base text-muted-foreground leading-none">Flooring</span>

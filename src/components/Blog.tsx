@@ -35,8 +35,8 @@ const Blog = () => {
   return (
     <section id="work" className="section-spacing bg-card">
       <div className="section-container">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 items-start">
-          <div className="max-w-xl lg:pt-10">
+        <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 items-start">
+          <div className="max-w-xl lg:pt-8 xl:pt-10">
             <span className="text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-4 block font-sans">
               Our Work
             </span>
@@ -45,7 +45,7 @@ const Blog = () => {
             </h2>
           </div>
 
-          <div className="lg:justify-self-end w-full lg:max-w-[560px] xl:max-w-[620px]">
+          <div className="lg:justify-self-end w-full lg:max-w-[440px] xl:max-w-[500px]">
             <div className="overflow-hidden rounded-sm bg-card border border-border shadow-[0_25px_80px_rgba(0,0,0,0.08)]">
               <blockquote
                 className="instagram-media w-full !max-w-none"

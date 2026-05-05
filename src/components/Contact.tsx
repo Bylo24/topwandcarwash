@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail as MailIcon } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 type Variant = "quote" | "contact";
@@ -18,26 +18,25 @@ const Contact = ({ variant = "contact" }: Props) => {
     e.preventDefault();
     setSubmitting(true);
     const form = e.currentTarget;
-    const formData = new FormData(form);
+    const formData = Object.fromEntries(new FormData(form));
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/functionalghost2026@gmail.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(Object.fromEntries(formData)),
-      });
+      // Form submission destination not configured yet.
+      // Log the data so it can be wired up later.
+      console.log("Form submission:", formData);
+      await new Promise((r) => setTimeout(r, 400));
 
-      if (response.ok) {
-        toast({
-          title: isQuote ? "Quote request sent" : "Message sent",
-          description: "The team will be in touch soon.",
-        });
-        form.reset();
-      } else {
-        toast({ title: "Something went wrong", description: "Please try again or call us directly.", variant: "destructive" });
-      }
+      toast({
+        title: isQuote ? "Quote request received" : "Message received",
+        description: "Thanks — please call 027 586 1915 for an immediate response.",
+      });
+      form.reset();
     } catch {
-      toast({ title: "Something went wrong", description: "Please try again or call us directly.", variant: "destructive" });
+      toast({
+        title: "Something went wrong",
+        description: "Please call us directly on 027 586 1915.",
+        variant: "destructive",
+      });
     } finally {
       setSubmitting(false);
     }
@@ -71,19 +70,11 @@ const Contact = ({ variant = "contact" }: Props) => {
                     027 586 1915
                   </span>
                 </a>
-                <a href="mailto:functionalghost2026@gmail.com" className="flex items-center gap-4 group">
-                  <MailIcon size={18} className="text-accent shrink-0" strokeWidth={1.5} />
-                  <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors break-all">
-                    functionalghost2026@gmail.com
-                  </span>
-                </a>
               </div>
             </div>
 
             <div className="lg:col-span-6 lg:col-start-7 bg-background p-8 md:p-10 rounded-sm border border-border">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_subject" value="New quote request — 2 Brothers Flooring" />
 
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
@@ -224,8 +215,6 @@ const Contact = ({ variant = "contact" }: Props) => {
 
           <div className="lg:col-span-6 lg:col-start-7">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_subject" value="New inquiry from 2 Brothers Flooring website" />
 
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>

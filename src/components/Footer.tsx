@@ -22,7 +22,6 @@ const Footer = () => {
               {[
                 { label: "Meet The Bros", href: "#bros" },
                 { label: "Our Work", href: "#work" },
-                { label: "Reviews", href: "#reviews" },
                 { label: "Get a Quote", href: "#quote" },
                 { label: "Contact", href: "#contact" },
               ].map((link) => (

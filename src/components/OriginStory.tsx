@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import theBros from "@/assets/the-bros.png";
+import theBros from "@/assets/team.jpg";
 
 const bros = [
   {

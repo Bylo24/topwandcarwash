@@ -11,7 +11,8 @@ const Hero = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/98 via-foreground/88 to-foreground/66" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/85 to-black/70" />
+        <div className="absolute inset-0 bg-black/10" />
       </div>
 
       <div className="section-container w-full relative z-10">

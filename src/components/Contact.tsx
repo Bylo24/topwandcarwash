@@ -70,12 +70,6 @@ const Contact = ({ variant = "contact" }: Props) => {
                     027 586 1915
                   </span>
                 </a>
-                <a href="mailto:functionalghost2026@gmail.com" className="flex items-center gap-4 group">
-                  <MailIcon size={18} className="text-accent shrink-0" strokeWidth={1.5} />
-                  <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors break-all">
-                    functionalghost2026@gmail.com
-                  </span>
-                </a>
               </div>
             </div>
 

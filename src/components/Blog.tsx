@@ -3,7 +3,7 @@ import workWetfloor from "@/assets/work-wetfloor.jpg";
 import workVinyl from "@/assets/work-vinyl.jpg";
 import workCommercial from "@/assets/work-commercial.jpg";
 import workStairs from "@/assets/work-stairs.jpg";
-import workGarage from "@/assets/work-garage.jpg";
+import workGarage from "@/assets/Garage.jpg";
 
 const projects = [
   {

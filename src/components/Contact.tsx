@@ -229,11 +229,11 @@ const Contact = ({ variant = "contact" }: Props) => {
 
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase">
+                  <label htmlFor="c-name" className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase">
                     Name
                   </label>
                   <input
-                    id="name"
+                    id="c-name"
                     name="name"
                     type="text"
                     required
@@ -241,11 +241,11 @@ const Contact = ({ variant = "contact" }: Props) => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase">
+                  <label htmlFor="c-email" className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase">
                     Email
                   </label>
                   <input
-                    id="email"
+                    id="c-email"
                     name="email"
                     type="email"
                     required
@@ -255,11 +255,11 @@ const Contact = ({ variant = "contact" }: Props) => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase">
+                <label htmlFor="c-subject" className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase">
                   Subject
                 </label>
                 <input
-                  id="subject"
+                  id="c-subject"
                   name="subject"
                   type="text"
                   required
@@ -268,11 +268,11 @@ const Contact = ({ variant = "contact" }: Props) => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase">
+                <label htmlFor="c-message" className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase">
                   Message
                 </label>
                 <textarea
-                  id="message"
+                  id="c-message"
                   name="message"
                   rows={5}
                   required

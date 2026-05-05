@@ -46,7 +46,7 @@ const Blog = () => {
           </div>
           <div className="lg:col-span-4 lg:col-start-9 flex items-end">
             <p className="text-muted-foreground leading-relaxed text-base">
-              A live look at recent jobs, finishes, and behind-the-scenes updates from the team.
+              A live look at recent jobs, finishes, and behind-the-scenes updates from the brothers.
             </p>
           </div>
         </div>

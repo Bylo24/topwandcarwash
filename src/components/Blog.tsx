@@ -35,8 +35,8 @@ const Blog = () => {
   return (
     <section id="work" className="section-spacing bg-card">
       <div className="section-container">
-        <div className="grid lg:grid-cols-12 gap-8 mb-12 md:mb-14">
-          <div className="lg:col-span-7">
+        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 mb-12 md:mb-14 items-end">
+          <div className="max-w-2xl">
             <span className="text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-4 block font-sans">
               Our Work
             </span>
@@ -44,39 +44,38 @@ const Blog = () => {
               See Our Work.
             </h2>
           </div>
-          <div className="lg:col-span-4 lg:col-start-9 flex items-end">
-            <p className="text-muted-foreground leading-relaxed text-base">
+          <div className="max-w-xl lg:justify-self-end">
+            <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
               A live look at recent jobs, finishes, and behind-the-scenes updates from the brothers.
             </p>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-8 items-start">
-          <div className="lg:col-span-5">
-            <div className="rounded-sm border border-border bg-background/85 p-4 sm:p-5 md:p-6 shadow-[0_25px_80px_rgba(0,0,0,0.08)]">
-              <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
-                <div>
-                  <span className="text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-3 block font-sans">
-                    Instagram
-                  </span>
-                  <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-foreground leading-[1] text-balance">
-                    @2_brothers_flooring_ltd
-                  </h3>
-                </div>
-                <a
-                  href={instagramProfileUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm font-semibold uppercase tracking-wider text-foreground hover:text-accent transition-colors"
-                >
-                  Open profile
-                </a>
-              </div>
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10 items-start">
+          <div className="lg:pt-8">
+            <div className="rounded-sm border border-border bg-background/90 p-5 sm:p-6 md:p-7 shadow-[0_25px_80px_rgba(0,0,0,0.08)]">
+              <span className="text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-4 block font-sans">
+                Instagram
+              </span>
+              <h3 className="font-display text-2xl sm:text-3xl md:text-4xl text-foreground leading-[1] text-balance mb-5">
+                @2_brothers_flooring_ltd
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base max-w-md mb-6">
+                Follow the brothers for fresh installs, tidy finishes, and updates from current jobs.
+              </p>
+              <a
+                href={instagramProfileUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground hover:text-accent transition-colors"
+              >
+                Open profile
+              </a>
             </div>
           </div>
 
-          <div className="lg:col-span-7">
-            <div className="overflow-hidden rounded-sm bg-card border border-border shadow-[0_25px_80px_rgba(0,0,0,0.08)] lg:max-w-[680px] lg:ml-auto">
+          <div className="lg:justify-self-end w-full lg:max-w-[620px]">
+            <div className="overflow-hidden rounded-sm bg-card border border-border shadow-[0_25px_80px_rgba(0,0,0,0.08)]">
               <blockquote
                 className="instagram-media w-full !max-w-none"
                 data-instgrm-permalink={instagramProfileUrl}

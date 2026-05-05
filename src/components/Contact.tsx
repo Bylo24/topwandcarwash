@@ -93,13 +93,13 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-6 lg:col-start-7 bg-neutral-950 text-white p-6 sm:p-8 md:p-10 rounded-sm border border-neutral-800 shadow-[0_25px_80px_-50px_rgba(0,0,0,0.7)]">
+          <div className="lg:col-span-6 lg:col-start-7 bg-background text-foreground p-6 sm:p-8 md:p-10 rounded-sm border border-border shadow-[0_25px_80px_-50px_rgba(0,0,0,0.18)]">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label
                     htmlFor="q-name"
-                    className="block text-xs font-semibold text-white mb-2 font-sans tracking-[0.15em] uppercase"
+                    className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase"
                   >
                     Your Name
                   </label>
@@ -108,13 +108,13 @@ const Contact = () => {
                     name="name"
                     type="text"
                     required
-                    className="w-full border-0 border-b border-white/15 bg-transparent px-0 py-3 text-sm text-white placeholder:text-white/35 focus:outline-none focus:border-accent transition-colors duration-200"
+                    className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-accent transition-colors duration-200"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="q-email"
-                    className="block text-xs font-semibold text-white mb-2 font-sans tracking-[0.15em] uppercase"
+                    className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase"
                   >
                     Email
                   </label>
@@ -123,7 +123,7 @@ const Contact = () => {
                     name="email"
                     type="email"
                     required
-                    className="w-full border-0 border-b border-white/15 bg-transparent px-0 py-3 text-sm text-white placeholder:text-white/35 focus:outline-none focus:border-accent transition-colors duration-200"
+                    className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-accent transition-colors duration-200"
                   />
                 </div>
               </div>
@@ -132,7 +132,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="q-phone"
-                    className="block text-xs font-semibold text-white mb-2 font-sans tracking-[0.15em] uppercase"
+                    className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase"
                   >
                     Phone
                   </label>
@@ -140,13 +140,13 @@ const Contact = () => {
                     id="q-phone"
                     name="phone"
                     type="tel"
-                    className="w-full border-0 border-b border-white/15 bg-transparent px-0 py-3 text-sm text-white focus:outline-none focus:border-accent transition-colors duration-200"
+                    className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-200"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="q-mobile"
-                    className="block text-xs font-semibold text-white mb-2 font-sans tracking-[0.15em] uppercase"
+                    className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase"
                   >
                     Mobile
                   </label>
@@ -154,7 +154,7 @@ const Contact = () => {
                     id="q-mobile"
                     name="mobile"
                     type="tel"
-                    className="w-full border-0 border-b border-white/15 bg-transparent px-0 py-3 text-sm text-white focus:outline-none focus:border-accent transition-colors duration-200"
+                    className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-200"
                   />
                 </div>
               </div>
@@ -162,7 +162,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="q-subject"
-                  className="block text-xs font-semibold text-white mb-2 font-sans tracking-[0.15em] uppercase"
+                  className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase"
                 >
                   Subject
                 </label>
@@ -171,7 +171,7 @@ const Contact = () => {
                   name="subject"
                   type="text"
                   required
-                  className="w-full border-0 border-b border-white/15 bg-transparent px-0 py-3 text-sm text-white placeholder:text-white/35 focus:outline-none focus:border-accent transition-colors duration-200"
+                  className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-accent transition-colors duration-200"
                   placeholder="Carpet, vinyl, wet floor."
                 />
               </div>
@@ -179,15 +179,15 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="q-message"
-                  className="block text-xs font-semibold text-white mb-2 font-sans tracking-[0.15em] uppercase"
+                  className="block text-xs font-semibold text-foreground mb-2 font-sans tracking-[0.15em] uppercase"
                 >
-                  Your Message <span className="text-white/55 normal-case font-normal tracking-normal">optional</span>
+                  Your Message <span className="text-muted-foreground/60 normal-case font-normal tracking-normal">optional</span>
                 </label>
                 <textarea
                   id="q-message"
                   name="message"
                   rows={4}
-                  className="w-full border-0 border-b border-white/15 bg-transparent px-0 py-3 text-sm text-white placeholder:text-white/35 focus:outline-none focus:border-accent transition-colors duration-200 resize-none"
+                  className="w-full border-0 border-b border-border bg-transparent px-0 py-3 text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-accent transition-colors duration-200 resize-none"
                   placeholder="Tell us about the space, room sizes, or anything else."
                 />
               </div>

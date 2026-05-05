@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail as MailIcon } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 type Variant = "quote" | "contact";
@@ -75,8 +75,6 @@ const Contact = ({ variant = "contact" }: Props) => {
 
             <div className="lg:col-span-6 lg:col-start-7 bg-background p-8 md:p-10 rounded-sm border border-border">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_subject" value="New quote request — 2 Brothers Flooring" />
 
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
@@ -217,8 +215,6 @@ const Contact = ({ variant = "contact" }: Props) => {
 
           <div className="lg:col-span-6 lg:col-start-7">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_subject" value="New inquiry from 2 Brothers Flooring website" />
 
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>

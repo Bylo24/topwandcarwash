@@ -7,7 +7,7 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { site } from "@/config/site";
+import { site, contact } from "@/config/site";
 
 const Contact = () => {
   const { toast } = useToast();

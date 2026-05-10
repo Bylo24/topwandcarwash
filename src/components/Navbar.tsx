@@ -1,29 +1,24 @@
+/**
+ * SECTION: Navbar
+ * PURPOSE: Sticky top navigation with brand wordmark, links, and CTA.
+ * REMIX: Almost always kept. Edit links and brand via src/config/site.ts.
+ */
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
-
-const navLinks = [
-  { label: "Meet The Bros", href: "#bros" },
-  { label: "Our Work", href: "#work" },
-  { label: "Contact", href: "#quote" },
-];
+import { site } from "@/config/site";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/40 shadow-[0_1px_0_rgba(0,0,0,0.04)]">
-      <div className="section-container flex items-center justify-between h-16 sm:h-16 md:h-20">
-        <a href="/" className="flex items-center gap-3">
-          <img src={logo} alt="2 Brothers Flooring Ltd" className="h-11 w-11 sm:h-10 sm:w-10 md:h-12 md:w-12 object-contain" />
-          <span className="hidden sm:flex items-baseline gap-2">
-            <span className="font-display text-xl md:text-2xl text-foreground leading-none">2 Brothers</span>
-            <span className="font-display text-sm md:text-base text-muted-foreground leading-none">Flooring</span>
-          </span>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/60">
+      <div className="section-container flex items-center justify-between h-16 md:h-20">
+        <a href="/" className="font-display text-xl md:text-2xl text-foreground tracking-wide">
+          {site.name}
         </a>
 
         <div className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
+          {site.nav.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -33,10 +28,10 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#quote"
-            className="text-sm font-semibold text-accent-foreground bg-accent px-5 py-2.5 rounded-sm transition-all duration-200 hover:opacity-90 tracking-wide uppercase shadow-[0_10px_30px_-16px_rgba(0,0,0,0.6)]"
+            href={site.cta.primary.href}
+            className="text-sm font-semibold text-background bg-foreground px-5 py-2.5 rounded-sm transition-opacity duration-200 hover:opacity-85 tracking-wide uppercase"
           >
-            Get a Quote
+            {site.cta.primary.label}
           </a>
         </div>
 
@@ -51,7 +46,7 @@ const Navbar = () => {
 
       {open && (
         <div className="md:hidden bg-background border-t border-border px-4 pb-5 pt-3">
-          {navLinks.map((link) => (
+          {site.nav.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -62,11 +57,11 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#quote"
+            href={site.cta.primary.href}
             onClick={() => setOpen(false)}
-            className="mt-4 block text-center text-sm font-semibold text-accent-foreground bg-accent px-5 py-3.5 rounded-sm uppercase tracking-wide"
+            className="mt-4 block text-center text-sm font-semibold text-background bg-foreground px-5 py-3.5 rounded-sm uppercase tracking-wide"
           >
-            Get a Quote
+            {site.cta.primary.label}
           </a>
         </div>
       )}

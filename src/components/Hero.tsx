@@ -1,56 +1,53 @@
-import heroImage from "@/assets/hero-flooring.jpg";
+/**
+ * SECTION: Hero
+ * PURPOSE: Above-the-fold headline, subhead, and primary CTAs.
+ * REMIX: Almost always kept. Swap copy via src/config/site.ts. To add a
+ * background image, drop one into src/assets/ and uncomment the <img> block.
+ */
+import { site } from "@/config/site";
+// import heroImage from "@/assets/placeholder-hero.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative isolate min-h-[76svh] lg:min-h-[72svh] flex items-end pt-24 sm:pt-28 md:pt-32 lg:pt-28 pb-14 md:pb-16 overflow-hidden bg-neutral-950">
+    <section className="relative isolate min-h-[88svh] flex items-center pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden bg-background">
+      {/* Optional background image — uncomment to use.
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <img
-          src={heroImage}
-          alt="Newly installed timber-look vinyl flooring in a modern New Zealand home"
-          className="w-full h-full object-cover"
-          width={1920}
-          height={1080}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/55 to-black/35" />
-        <div className="absolute inset-0 bg-black/5" />
-        <div className="absolute inset-0 bg-black/35 sm:hidden" />
-      </div>
+        <img src={heroImage} alt="" className="w-full h-full object-cover opacity-90" />
+        <div className="absolute inset-0 bg-background/70" />
+      </div> */}
 
       <div className="section-container w-full relative z-10">
         <div className="max-w-4xl">
-          <h1 className="reveal-up delay-100 mt-3 sm:mt-4 lg:mt-6 font-display text-4xl sm:text-5xl md:text-6xl lg:text-[5.75rem] leading-[0.92] text-background mb-5 text-balance max-w-3xl">
-            A family business created by exactly that, 2 Brothers.
+          <span className="reveal-up text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6 block font-sans">
+            {site.tagline}
+          </span>
+          <h1 className="reveal-up delay-100 font-display text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] leading-[0.92] text-foreground mb-6 text-balance">
+            A bold headline that says exactly what you do.
           </h1>
-          <p className="reveal-up delay-200 text-sm sm:text-base md:text-lg lg:text-xl text-background leading-relaxed max-w-2xl mb-6 sm:mb-8 font-light">
-            After working in many industries for the last 20 years and doing 40/70 hour weeks, we wanted
-            to create a company of our own and satisfy our career of running our own company, based on
-            precision flooring, specialists in carpet and vinyl.
-            <br />
-            <span className="block mt-4">
-              Unbeatable communication, unbeatable customer service! We spent 10 years building the best
-              name in the business.
-            </span>
+          <p className="reveal-up delay-200 text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-10 font-light">
+            One or two sentences of supporting copy that sets the tone, builds trust, and invites the
+            visitor to take the next step.
           </p>
-          <div className="reveal-up delay-300 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
+          <div className="reveal-up delay-300 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a
-              href="#quote"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-3 bg-background text-foreground px-8 py-4 text-sm font-semibold tracking-wider uppercase rounded-sm transition-all duration-200 hover:opacity-90"
+              href={site.cta.primary.href}
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-3 bg-foreground text-background px-8 py-4 text-sm font-semibold tracking-wider uppercase rounded-sm transition-opacity duration-200 hover:opacity-85"
             >
-              Request a Quote
+              {site.cta.primary.label}
             </a>
             <a
-              href="#quote"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-3 border border-background text-background px-8 py-4 text-sm font-semibold tracking-wider uppercase rounded-sm transition-all duration-200 hover:bg-background/10"
+              href={site.cta.secondary.href}
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-3 border border-foreground text-foreground px-8 py-4 text-sm font-semibold tracking-wider uppercase rounded-sm transition-colors duration-200 hover:bg-foreground hover:text-background"
             >
-              Contact Us
+              {site.cta.secondary.label}
             </a>
           </div>
         </div>
 
-        <div className="reveal-up delay-500 mt-10 sm:mt-12 md:mt-14 pt-5 border-t border-background/35 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-10 text-[10px] sm:text-xs text-background uppercase tracking-[0.2em]">
-          <span>20 Years Experience</span>
-          <span>Carpet, Vinyl, Wet Floors</span>
-          <span>Whanganui and Manawatu</span>
+        <div className="reveal-up delay-500 mt-16 md:mt-20 pt-6 border-t border-border flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-10 text-[10px] sm:text-xs text-muted-foreground uppercase tracking-[0.2em] font-semibold">
+          <span>Trust Signal One</span>
+          <span>Trust Signal Two</span>
+          <span>Trust Signal Three</span>
         </div>
       </div>
     </section>

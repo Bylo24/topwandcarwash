@@ -1,42 +1,17 @@
-import { Home, Building2, Droplets, Package, Wrench, Layers } from "lucide-react";
+/**
+ * SECTION: Services
+ * PURPOSE: Showcase 3–6 service offerings or feature pillars.
+ * REMIX: Safe to remove for portfolio/SaaS. Swap icons via lucide-react.
+ */
+import { Sparkles, Layers, Zap, Compass, Shield, Heart } from "lucide-react";
 
 const services = [
-  {
-    num: "01",
-    icon: Home,
-    title: "Domestic Carpet",
-    description: "Carpet supply and installation for homes of all sizes.",
-  },
-  {
-    num: "02",
-    icon: Layers,
-    title: "Vinyl and Vinyl Planks",
-    description: "Sheet vinyl, glue-down planks, and herringbone styles.",
-  },
-  {
-    num: "03",
-    icon: Droplets,
-    title: "Wet Floors",
-    description: "Slip-resistant wet floor solutions for safer bathrooms.",
-  },
-  {
-    num: "04",
-    icon: Building2,
-    title: "Commercial Installations",
-    description: "Commercial flooring for cafes, gyms, offices, and salons.",
-  },
-  {
-    num: "05",
-    icon: Wrench,
-    title: "Subfloors and Repairs",
-    description: "Floor prep, subfloors, and repair work done properly.",
-  },
-  {
-    num: "06",
-    icon: Package,
-    title: "Full Supply",
-    description: "A full supply service with carpet, vinyl, cork, needle punch, and turf.",
-  },
+  { num: "01", icon: Sparkles, title: "Service One", description: "A short, benefit-led description of this offering." },
+  { num: "02", icon: Layers, title: "Service Two", description: "Explain what the client gets and why it matters." },
+  { num: "03", icon: Zap, title: "Service Three", description: "Keep copy tight. One or two clear sentences." },
+  { num: "04", icon: Compass, title: "Service Four", description: "Speak to the outcome, not the process." },
+  { num: "05", icon: Shield, title: "Service Five", description: "Use plain language that anyone can understand." },
+  { num: "06", icon: Heart, title: "Service Six", description: "Close with the value the client walks away with." },
 ];
 
 const Services = () => {
@@ -45,16 +20,16 @@ const Services = () => {
       <div className="section-container">
         <div className="grid lg:grid-cols-12 gap-8 mb-12 md:mb-16">
           <div className="lg:col-span-6">
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-4 block font-sans">
+            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-4 block font-sans">
               What We Do
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1] text-balance">
-              Specialists in every floor.
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-foreground leading-[1] text-balance">
+              A clear section heading.
             </h2>
           </div>
           <div className="lg:col-span-5 lg:col-start-8 flex items-end">
             <p className="text-muted-foreground leading-relaxed text-base">
-              Big job or small, domestic or commercial, every quote is free and under no obligation.
+              Use this paragraph to set context for the services below. Keep it short and benefit-focused.
             </p>
           </div>
         </div>
@@ -63,11 +38,13 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.num}
-              className="bg-card p-6 sm:p-7 md:p-9 group transition-colors duration-300 hover:bg-background"
+              className="bg-card p-7 md:p-9 group transition-colors duration-300 hover:bg-background"
             >
               <div className="flex items-start justify-between mb-6">
-                <span className="text-xs text-muted-foreground font-sans tracking-wider font-semibold group-hover:text-foreground">{service.num}</span>
-                <service.icon size={22} className="text-muted-foreground/40 group-hover:text-foreground transition-colors duration-300" strokeWidth={1.5} />
+                <span className="text-xs text-muted-foreground font-sans tracking-wider font-semibold">
+                  {service.num}
+                </span>
+                <service.icon size={22} className="text-muted-foreground/50 group-hover:text-foreground transition-colors duration-300" strokeWidth={1.5} />
               </div>
               <h3 className="font-display text-2xl md:text-3xl text-foreground mb-3 leading-none">
                 {service.title}

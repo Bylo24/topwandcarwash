@@ -1,9 +1,15 @@
+/**
+ * INDEX PAGE
+ * Composes all template sections. Comment out any section below to remove
+ * it from the page — every component is self-contained.
+ */
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import OriginStory from "@/components/OriginStory";
-import Blog from "@/components/Blog";
+import About from "@/components/About";
+import Work from "@/components/Work";
 import Testimonials from "@/components/Testimonials";
+import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -14,9 +20,10 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Services />
-      <OriginStory />
-      <Blog />
+      <About />
+      <Work />
       <Testimonials />
+      <CTA />
       <Contact />
       <Footer />
       <MobileStickyBar />

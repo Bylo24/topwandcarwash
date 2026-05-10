@@ -6,15 +6,9 @@
  */
 import { useEffect, useState } from "react";
 import { Quote, Star } from "lucide-react";
+import { testimonials } from "@/config/site";
 
-const reviews = [
-  { name: "Client Name One", role: "Role, Company", quote: "A short, glowing quote that feels real and specific to the work delivered." },
-  { name: "Client Name Two", role: "Role, Company", quote: "Another testimonial that highlights a different angle of the value provided." },
-  { name: "Client Name Three", role: "Role, Company", quote: "Keep quotes between one and three sentences. Avoid generic adjectives." },
-  { name: "Client Name Four", role: "Role, Company", quote: "A specific outcome or transformation makes a testimonial believable." },
-  { name: "Client Name Five", role: "Role, Company", quote: "Vary the tone across reviews so the section does not read repetitively." },
-  { name: "Client Name Six", role: "Role, Company", quote: "Close the set with a quote that invites the reader to take the next step." },
-];
+const reviews = testimonials.reviews;
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);

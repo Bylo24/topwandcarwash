@@ -1,39 +1,63 @@
 # Agency Website Template
 
-A clean, monochrome, ultra-versatile base template for client websites. Built with React, Vite, Tailwind, and shadcn/ui.
+A clean, monochrome, ultra-versatile base template for client websites. Built with React, Vite, Tailwind, shadcn/ui, and Lovable Cloud-ready. Designed to be remixed into anything: agency, SaaS, portfolio, restaurant, trades, hospitality, e-commerce, B2B.
 
-## Quick remix guide
+## 60-second remix
 
-1. **Edit `src/config/site.ts`** — brand name, tagline, nav, CTAs, contact info. One file changes the whole site.
-2. **Edit copy** in each section component under `src/components/`. Every section starts with a JSDoc block describing its purpose and whether it's safe to remove.
-3. **Add brand colors** by editing the HSL tokens in `src/index.css` (`--background`, `--foreground`, `--muted`, etc.). All components use semantic tokens — no hard-coded colors.
-4. **Swap fonts** in `src/index.css` (Google Fonts import + `body` / `h1-h6` rules).
-5. **Add or remove sections** in `src/pages/Index.tsx` — just comment out the line.
-6. **Replace placeholder images** with files in `src/assets/` and import them in the relevant section.
+1. **`src/config/site.ts`** — change brand, nav, CTAs, contact, **and all section content** (services list, team, projects, testimonials, etc.). Single source of truth.
+2. **`src/config/theme.ts`** — preset palettes + font pairings. Copy any block into `src/index.css`.
+3. **`src/index.css`** — active HSL color tokens, font imports, radius. All components use semantic tokens (no hardcoded colors).
+4. **`src/pages/Index.tsx`** — comment out any section to remove it from the page.
+5. **`src/assets/`** — drop in real images and import where the placeholder boxes are.
 
 ## Section inventory
 
 | Section | File | Purpose | Safe to remove? |
 |---|---|---|---|
 | Navbar | `Navbar.tsx` | Top nav + CTA | No |
-| Hero | `Hero.tsx` | Headline + CTAs | No |
+| Hero | `Hero.tsx` | Headline + CTAs + trust strip | No |
 | Services | `Services.tsx` | 3–6 offerings grid | Yes |
-| About | `About.tsx` | Story + team | Yes |
+| About | `About.tsx` | Story + team grid | Yes |
 | Work | `Work.tsx` | Portfolio grid | Yes |
-| Testimonials | `Testimonials.tsx` | Social proof | Yes |
-| CTA | `CTA.tsx` | Conversion band | Yes |
-| Contact | `Contact.tsx` | Form + info | Usually no |
-| Footer | `Footer.tsx` | Brand + nav | No |
-| MobileStickyBar | `MobileStickyBar.tsx` | Mobile CTA bar | Yes |
+| Testimonials | `Testimonials.tsx` | Carousel (mobile) + grid (desktop) | Yes |
+| CTA | `CTA.tsx` | Full-bleed conversion band | Yes |
+| Contact | `Contact.tsx` | Form + contact info | Usually no |
+| Footer | `Footer.tsx` | Brand + nav + contact | No |
+| MobileStickyBar | `MobileStickyBar.tsx` | Persistent mobile CTA | Yes |
 
-## Design system
+Each component starts with a JSDoc header describing intent, what to edit, and whether it's safe to drop.
 
-- **Tokens** live in `src/index.css` (HSL only).
-- **Tailwind** maps tokens to utility classes in `tailwind.config.ts`.
-- **Default palette** is monochrome: pure white background, near-black foreground. Swap `--background`, `--foreground`, and `--muted-foreground` to rebrand.
-- **Typography**: Bebas Neue (display) + Inter (body). Replace via the Google Fonts import.
+## Customization resources
+
+### Color palettes (in `src/config/theme.ts`)
+- **Monochrome** (default) — agency, editorial
+- **Editorial Cream** — warm, premium, hospitality
+- **Midnight Blue** — SaaS, tech, fintech
+- **Forest Studio** — wellness, sustainability, organic brands
+- **Brutalist Yellow** — bold, attention-grabbing, fashion
+- **Soft Pastel** — beauty, lifestyle, DTC
+
+### Font pairings (in `src/config/theme.ts`)
+- **Bebas Neue + Inter** (default) — bold display, clean body
+- **Instrument Serif + DM Sans** — editorial, premium
+- **Space Grotesk + Space Mono** — technical, modern SaaS
+- **Playfair Display + Lora** — luxury, hospitality
+- **Archivo Black + Archivo** — sport, agency, bold
+- **Fraunces + Manrope** — warm, friendly
+
+### Density
+Change `--radius` in `src/index.css` to flip the whole site between sharp/brutalist (`0`), default (`0.375rem`), soft (`0.75rem`), or pill (`1.25rem`).
+
+## Responsive
+
+- All sections scale fluidly from 320px → 1920px.
+- `min-h-[80svh]` on hero uses small-viewport units to avoid mobile-browser jump.
+- Grids collapse: 3-col → 2-col → 1-col at `lg` / `sm` breakpoints.
+- `MobileStickyBar` only renders below `sm` and respects iOS safe-area insets.
+- All anchored sections use `scroll-mt-20` so the sticky navbar never overlaps the heading.
 
 ## Notes for future chats
 
-- The Contact form is not wired to a backend. Connect it to Lovable Cloud or an email service when needed.
-- All copy is placeholder — search for "Studio Name", "Team Member", "Project One", etc. to replace.
+- **Contact form** is a front-end shell — wire to Lovable Cloud (an edge function or a `contact_messages` table) when needed. Marked with a `TODO` in `Contact.tsx`.
+- All copy is placeholder. Search for `Studio Name`, `Team Member`, `Project One`, `Client Name` to bulk-replace.
+- Lovable Cloud is enabled on this template; backend can be added without extra setup.

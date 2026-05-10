@@ -7,7 +7,7 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { site } from "@/config/site";
+import { site, contact } from "@/config/site";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -38,18 +38,18 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-spacing bg-card scroll-mt-24">
+    <section id="contact" className="section-spacing bg-card scroll-mt-20">
       <div className="section-container">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16">
           <div className="lg:col-span-5">
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-4 block font-sans">
-              Contact
+            <span className="text-[10px] sm:text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-3 sm:mb-4 block font-sans">
+              {contact.eyebrow}
             </span>
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-foreground leading-[1] mb-6 text-balance">
-              Let's talk.
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-foreground leading-[1] mb-5 sm:mb-6 text-balance">
+              {contact.heading}
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-10 text-sm sm:text-base">
-              Send a message and we will get back to you within one business day.
+            <p className="text-muted-foreground leading-relaxed mb-8 sm:mb-10 text-sm sm:text-base">
+              {contact.intro}
             </p>
 
             <div className="space-y-6">

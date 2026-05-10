@@ -21,20 +21,20 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section id="reviews" className="section-spacing bg-background">
+    <section id="reviews" className="section-spacing bg-background scroll-mt-20">
       <div className="section-container">
-        <div className="grid lg:grid-cols-12 gap-8 mb-10 md:mb-14 items-end">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 mb-8 md:mb-14 lg:items-end">
           <div className="lg:col-span-7">
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-4 block font-sans">
-              Testimonials
+            <span className="text-[10px] sm:text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-3 sm:mb-4 block font-sans">
+              {testimonials.eyebrow}
             </span>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-foreground leading-[1] text-balance">
-              What clients say.
+              {testimonials.heading}
             </h2>
           </div>
           <div className="lg:col-span-4 lg:col-start-9">
             <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-              Real words from people we have worked with.
+              {testimonials.intro}
             </p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "j-grimm-contracting",
+  "name": "topwandcarwash",
   "compatibility_date": "2026-05-04",
   "observability": {
     "enabled": true

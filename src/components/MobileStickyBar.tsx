@@ -14,14 +14,14 @@ const MobileStickyBar = () => {
     >
       <div className="mx-auto grid max-w-md grid-cols-2 gap-2 rounded-2xl border border-border bg-background/95 p-2 shadow-[0_-10px_30px_rgba(0,0,0,0.08)] backdrop-blur-md">
         <a
-          href={site.cta.primary.href}
-          className="inline-flex h-11 items-center justify-center rounded-xl bg-foreground px-4 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-background transition-opacity hover:opacity-90"
+          href="#services"
+          className="inline-flex h-11 items-center justify-center rounded-xl bg-[#005EC3] px-4 text-[0.72rem] font-normal uppercase tracking-[0.12em] text-white transition-opacity hover:opacity-90"
         >
-          {site.cta.primary.label}
+          View Services
         </a>
         <a
           href={site.contact.phoneHref}
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-border bg-background px-4 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-foreground transition-colors hover:bg-muted"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-border bg-background px-4 text-[0.72rem] font-normal uppercase tracking-[0.12em] text-foreground transition-colors hover:bg-muted"
         >
           <Phone size={16} strokeWidth={2} />
           Call

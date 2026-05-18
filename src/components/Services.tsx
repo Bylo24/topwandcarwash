@@ -11,7 +11,7 @@ const Services = () => {
       <div className="section-container">
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 mb-10 md:mb-16">
           <div className="lg:col-span-6">
-            <span className="text-[10px] sm:text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-3 sm:mb-4 block font-sans">
+            <span className="text-[10px] sm:text-xs font-normal tracking-[0.25em] uppercase text-muted-foreground mb-3 sm:mb-4 block font-sans">
               {services.eyebrow}
             </span>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-foreground leading-[1] text-balance">
@@ -32,7 +32,7 @@ const Services = () => {
               className="bg-card p-6 sm:p-7 md:p-9 group transition-colors duration-300 hover:bg-background"
             >
               <div className="flex items-start justify-between mb-5 sm:mb-6">
-                <span className="text-xs text-muted-foreground font-sans tracking-wider font-semibold">
+                <span className="text-xs text-muted-foreground font-sans tracking-wider font-normal">
                   {service.num}
                 </span>
                 <service.icon size={22} className="text-muted-foreground/50 group-hover:text-foreground transition-colors duration-300" strokeWidth={1.5} />

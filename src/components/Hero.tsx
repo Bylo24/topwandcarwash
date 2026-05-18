@@ -1,49 +1,52 @@
-/**
- * SECTION: Hero
- * PURPOSE: Above-the-fold headline, subhead, and primary CTAs.
- * REMIX: Almost always kept. Edit copy via src/config/site.ts (`hero`).
- * To add a background image, drop one in src/assets/ and uncomment below.
- */
-import { hero, site } from "@/config/site";
-// import heroImage from "@/assets/placeholder-hero.jpg";
+import { hero } from "@/config/site";
+
+const heroImage =
+  "https://scontent-akl1-1.xx.fbcdn.net/v/t1.6435-9/75323333_2759933247392970_1217586265927450624_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=fFsdHg84mf0Q7kNvwHYfAkh&_nc_oc=Ado7aJC5HQPwAaNYFzrQKUarmUTF0WVylzljsvVEnoYvlC0iYPRi-9ImlQB2YAs3j80sHutUeh7jtGEzoEEgNZ5Y&_nc_zt=23&_nc_ht=scontent-akl1-1.xx&_nc_gid=pF6ywSPYaprzXkB5-1i2VA&_nc_ss=7b2a8&oh=00_Af5iRxrBMpeac_JDgEnz7uJ0IIZqe_emS8y9L0RPACCQ9g&oe=6A31F072";
+
+const directionsUrl =
+  "https://www.google.com/maps/search/?api=1&query=6306%20Fifty%20Five%20Street%2C%20Taber%2C%20AB%2C%20Canada%2C%20T1G%202H4";
 
 const Hero = () => {
   return (
-    <section className="relative isolate flex items-center min-h-[80svh] md:min-h-[88svh] pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden bg-background">
-      {/* Optional background image — uncomment to use.
+    <section className="relative isolate min-h-[76svh] lg:min-h-[72svh] flex items-end pt-24 sm:pt-28 md:pt-32 lg:pt-28 pb-14 md:pb-16 overflow-hidden bg-neutral-950">
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <img src={heroImage} alt="" className="w-full h-full object-cover opacity-90" />
-        <div className="absolute inset-0 bg-background/70" />
-      </div> */}
+        <img
+          src={heroImage}
+          alt="Topwand Car and Truck Wash facility"
+          className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/40" />
+        <div className="absolute inset-0 bg-[#005EC3]/20" />
+        <div className="absolute inset-0 bg-black/35 sm:hidden" />
+      </div>
 
       <div className="section-container w-full relative z-10">
         <div className="max-w-4xl">
-          <span className="reveal-up text-[10px] sm:text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-5 sm:mb-6 block font-sans">
-            {hero.eyebrow}
-          </span>
-          <h1 className="reveal-up delay-100 font-display text-[2.75rem] xs:text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] leading-[0.95] md:leading-[0.92] text-foreground mb-5 sm:mb-6 text-balance">
+          <h1 className="reveal-up delay-100 mt-3 sm:mt-4 lg:mt-6 font-display text-4xl sm:text-5xl md:text-6xl lg:text-[5.75rem] leading-[0.92] text-background mb-5 text-balance max-w-3xl">
             {hero.headline}
           </h1>
-          <p className="reveal-up delay-200 text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-8 sm:mb-10 font-light">
+          <p className="reveal-up delay-200 text-sm sm:text-base md:text-lg lg:text-xl text-background leading-relaxed max-w-2xl mb-6 sm:mb-8 font-light">
             {hero.subhead}
           </p>
-          <div className="reveal-up delay-300 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="reveal-up delay-300 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
             <a
-              href={site.cta.primary.href}
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-3 bg-foreground text-background px-8 py-4 text-sm font-semibold tracking-wider uppercase rounded-sm transition-opacity duration-200 hover:opacity-85"
+              href="#services"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-3 bg-[#005EC3] text-white px-8 py-4 text-sm font-normal tracking-wider uppercase rounded-sm transition-opacity duration-200 hover:opacity-90"
             >
-              {site.cta.primary.label}
+              View Services
             </a>
             <a
-              href={site.cta.secondary.href}
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-3 border border-foreground text-foreground px-8 py-4 text-sm font-semibold tracking-wider uppercase rounded-sm transition-colors duration-200 hover:bg-foreground hover:text-background"
+              href={directionsUrl}
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-3 border border-background bg-background text-[#005EC3] px-8 py-4 text-sm font-normal tracking-wider uppercase rounded-sm transition-colors duration-200 hover:bg-background/90"
             >
-              {site.cta.secondary.label}
+              Get Directions
             </a>
           </div>
         </div>
 
-        <div className="reveal-up delay-500 mt-12 sm:mt-16 md:mt-20 pt-6 border-t border-border flex flex-wrap items-center gap-x-8 gap-y-2 sm:gap-x-10 text-[10px] sm:text-xs text-muted-foreground uppercase tracking-[0.2em] font-semibold">
+        <div className="reveal-up delay-500 mt-10 sm:mt-12 md:mt-14 pt-5 border-t border-background/35 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-10 text-[10px] sm:text-xs text-background uppercase tracking-[0.2em]">
           {hero.trustSignals.map((signal) => (
             <span key={signal}>{signal}</span>
           ))}

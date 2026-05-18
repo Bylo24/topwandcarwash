@@ -1,40 +1,28 @@
-/**
- * SITE CONFIG — single source of truth for content.
- *
- * Edit this file FIRST when remixing the template. Every section reads from
- * here, so updating brand, copy, services, work, testimonials, etc. only
- * happens in one place.
- *
- * For visual/theme customization (colors, fonts, radii) see:
- *   - src/config/theme.ts        (preset palettes + font pairings)
- *   - src/index.css              (active CSS tokens)
- */
-import { Sparkles, Layers, Zap, Compass, Shield, Heart } from "lucide-react";
+import { Car, CircleGauge, ClipboardList, HeartHandshake, MapPin, PackageCheck, Store, Truck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export const site = {
-  name: "J. Grimm Contracting",
-  tagline: "Residential and commercial contracting in Edmonton.",
+  name: "Topwand Car and Truck Wash",
+  tagline: "Vehicle wash facility in Taber.",
   description:
-    "J. Grimm Contracting provides reliable residential and commercial contracting services in the Edmonton area.",
+    "Topwand Car and Truck Wash provides self serve wash bays, big truck access, and onsite convenience items in Taber, Alberta.",
 
   nav: [
     { label: "Services", href: "#services" },
     { label: "About", href: "#about" },
-    { label: "Work", href: "#work" },
-    { label: "Contact", href: "#contact" },
+    { label: "Reviews", href: "#reviews" },
   ],
 
   cta: {
-    primary: { label: "Get a Quote", href: "#contact" },
-    secondary: { label: "Our Work", href: "#work" },
+    primary: { label: "Call Now", href: "tel:+14032230397" },
+    secondary: { label: "View Services", href: "#services" },
   },
 
   contact: {
-    phone: "",
-    phoneHref: "",
-    email: "",
-    location: "Edmonton, Alberta",
+    phone: "403 223 0397",
+    phoneHref: "tel:+14032230397",
+    email: "topwand@telus.net",
+    location: "6306 Fifty Five Street, Taber, AB, Canada, T1G 2H4",
   },
 
   social: {
@@ -44,18 +32,12 @@ export const site = {
   },
 } as const;
 
-/* ------------------------------------------------------------------ */
-/* SECTION CONTENT                                                    */
-/* Each section pulls from one of these arrays/objects. Add, remove,  */
-/* or reorder freely — the components map over what they receive.      */
-/* ------------------------------------------------------------------ */
-
 export const hero = {
-  eyebrow: site.tagline,
-  headline: "Contracting services for residential and commercial projects.",
+  eyebrow: "Taber Alberta",
+  headline: "A professional vehicle wash facility built for cars and big trucks.",
   subhead:
-    "J. Grimm Contracting provides reliable solutions from renovations to new construction, with quality workmanship for every project.",
-  trustSignals: ["Residential Projects", "Commercial Work", "Edmonton Area"],
+    "The facility offers self serve wash bays alongside a convenience store for daily essentials and automotive supplies.",
+  trustSignals: ["Self Serve Wash Bays", "Big Truck Access", "Taber Alberta"],
 } as const;
 
 export const services: {
@@ -64,65 +46,61 @@ export const services: {
   intro: string;
   items: { num: string; icon: LucideIcon; title: string; description: string }[];
 } = {
-  eyebrow: "What We Do",
-  heading: "Contracting services in Edmonton.",
+  eyebrow: "Our Facility",
+  heading: "Services for every vehicle.",
   intro:
-    "Practical construction support for homeowners, property managers, and businesses.",
+    "Topwand Car and Truck Wash supports daily drivers, commercial vehicles, and long distance travel stops.",
   items: [
-    { num: "01", icon: Sparkles, title: "Residential Renovations", description: "Interior and exterior renovation work tailored to each property." },
-    { num: "02", icon: Layers,   title: "Commercial Projects", description: "Structural and interior contracting work for businesses and commercial spaces." },
-    { num: "03", icon: Zap,      title: "New Construction", description: "Construction support for new builds, additions, and property improvements." },
-    { num: "04", icon: Compass,  title: "Project Management", description: "Clear coordination across scope, schedule, trades, and site requirements." },
-    { num: "05", icon: Shield,   title: "Quality Workmanship", description: "Careful execution with attention to durability, finish, and details." },
-    { num: "06", icon: Heart,    title: "General Contracting", description: "Reliable contracting services for a range of residential and commercial needs." },
+    { num: "01", icon: Car, title: "Car Wash Bays", description: "Self serve bays feature high pressure wands and quality soaps for everyday vehicles." },
+    { num: "02", icon: Truck, title: "Big Truck Wash", description: "Large bays are designed specifically to accommodate semi trucks, commercial fleets, and recreational vehicles." },
+    { num: "03", icon: Store, title: "Convenience Store", description: "The onsite store stocks snacks, cold drinks, hot coffee, and essential travel items." },
+    { num: "04", icon: ClipboardList, title: "Fleet Accounts", description: "Local businesses can set up regular commercial accounts for simplified monthly fleet vehicle cleaning." },
+    { num: "05", icon: CircleGauge, title: "Vacuum Stations", description: "High powered interior vacuum stations are available on site to clean vehicle carpets and upholstery." },
+    { num: "06", icon: PackageCheck, title: "Travel Supplies", description: "Drivers can purchase basic automotive fluids, cleaning wipes, and road trip necessities." },
   ],
 };
 
 export const about = {
   eyebrow: "About Us",
-  heading: "J. Grimm Contracting.",
+  heading: "Serving the Taber community.",
   paragraphs: [
-    "J. Grimm Contracting is a reputable contracting business based in Edmonton, Alberta. The team offers professional construction solutions for residential and commercial clients.",
-    "With a focus on quality workmanship and customer satisfaction, every project is planned around the specific requirements and timelines of the client.",
+    "Topwand Car and Truck Wash provides practical vehicle cleaning solutions for local residents and commercial drivers. The facility is equipped to handle everything from standard passenger cars to large transport trucks.",
+    "An onsite convenience store ensures that drivers can restock and refresh while cleaning their vehicles. The business focuses on straightforward service and reliable facility upkeep.",
   ],
   team: [
-    { name: "Service Area", role: "Edmonton and surrounding communities", initials: "SA" },
-    { name: "Project Types", role: "Renovations and new construction", initials: "PT" },
+    { name: "Convenient Location", role: "Situated easily on Fifty Five Street in Taber.", initials: "CL", icon: MapPin },
+    { name: "Community Focused", role: "Supporting local organizations and animal shelter initiatives.", initials: "CF", icon: HeartHandshake },
   ],
 } as const;
 
 export const work = {
-  eyebrow: "Selected Work",
-  heading: "Completed projects.",
-  intro: "A sample of residential and commercial contracting work.",
-  projects: [
-    { title: "Residential Renovation", category: "Residential", href: "#" },
-    { title: "Commercial Interior", category: "Commercial", href: "#" },
-    { title: "New Construction Support", category: "Construction", href: "#" },
-  ],
+  eyebrow: "Gallery",
+  heading: "The facility.",
+  intro: "",
+  projects: [],
 } as const;
 
 export const testimonials = {
-  eyebrow: "Testimonials",
-  heading: "What clients say.",
-  intro: "Feedback from residential and commercial clients.",
+  eyebrow: "Feedback",
+  heading: "What customers say.",
+  intro: "Customers describe the site as practical for everyday vehicle cleaning and larger truck access.",
   reviews: [
-    { name: "Local Business Owner", role: "Commercial Client", quote: "The project was handled professionally from start to finish, with clear communication throughout the work." },
-    { name: "Homeowner in Edmonton", role: "Residential Client", quote: "The team kept the renovation organized and delivered quality workmanship on the details that mattered." },
-    { name: "Property Manager", role: "Commercial Client", quote: "Reliable scheduling and practical problem solving made the construction process much easier to manage." },
-    { name: "Retail Manager", role: "Commercial Client", quote: "The finished space met our operational needs and the team was responsive throughout the project." },
-    { name: "Residential Client", role: "Home Renovation", quote: "They listened to the scope, respected the timeline, and produced a clean final result." },
-    { name: "Edmonton Resident", role: "Residential Client", quote: "A dependable contractor with strong attention to workmanship and communication." },
+    { name: "Local Driver", role: "Customer", quote: "The big truck wash bays are spacious and have excellent water pressure for larger commercial rigs." },
+    { name: "Regular Customer", role: "Customer", quote: "It is a clean facility with good soaps and the convenience store makes it easy to grab a coffee while washing." },
+    { name: "Taber Resident", role: "Customer", quote: "The self serve setup is simple to use and the bays are always kept tidy by the management." },
+    { name: "Transport Company", role: "Commercial Customer", quote: "Commercial fleet washing is efficient here and the location is highly accessible for big trucks." },
+    { name: "Community Member", role: "Customer", quote: "Friendly people and great service including support for local community causes and pet societies." },
+    { name: "Area Farmer", role: "Customer", quote: "Highly recommend this wash for anyone needing to clean a trailer or large farm equipment." },
   ],
 } as const;
 
 export const ctaBand = {
-  heading: "Ready to discuss your project?",
-  subhead: "Reach out to J. Grimm Contracting for residential and commercial contracting work in Edmonton.",
+  heading: "Visit the facility.",
+  subhead: "Stop by the location to use the self serve bays or contact the team directly to discuss commercial fleet accounts.",
 } as const;
 
 export const contact = {
   eyebrow: "Contact",
-  heading: "Get a quote.",
-  intro: "Send a message about your project requirements and the team will review the request.",
+  heading: "Visit the facility.",
+  intro: "Stop by the location to use the self serve bays or contact the team directly to discuss commercial fleet accounts.",
 } as const;

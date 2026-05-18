@@ -25,7 +25,7 @@ const Testimonials = () => {
       <div className="section-container">
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 mb-8 md:mb-14 lg:items-end">
           <div className="lg:col-span-7">
-            <span className="text-[10px] sm:text-xs font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-3 sm:mb-4 block font-sans">
+            <span className="text-[10px] sm:text-xs font-normal tracking-[0.25em] uppercase text-muted-foreground mb-3 sm:mb-4 block font-sans">
               {testimonials.eyebrow}
             </span>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-foreground leading-[1] text-balance">
@@ -53,7 +53,7 @@ const Testimonials = () => {
                   aria-hidden={!isActive}
                 >
                   <div className="flex items-center justify-between gap-4 mb-5">
-                    <div className="flex items-center gap-1 text-foreground">
+                    <div className="flex items-center gap-1 text-[#1D4ED8]">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
                       ))}
@@ -62,7 +62,7 @@ const Testimonials = () => {
                   </div>
                   <p className="text-sm sm:text-base leading-relaxed text-foreground/90">{review.quote}</p>
                   <div className="mt-6 pt-5 border-t border-border">
-                    <p className="text-sm font-semibold text-foreground">{review.name}</p>
+                    <p className="text-sm font-normal text-foreground">{review.name}</p>
                     <p className="text-xs text-muted-foreground mt-1">{review.role}</p>
                   </div>
                 </article>
@@ -92,7 +92,7 @@ const Testimonials = () => {
               className="rounded-2xl border border-border bg-card p-7 transition-transform duration-300 hover:-translate-y-0.5"
             >
               <div className="flex items-center justify-between gap-4 mb-5">
-                <div className="flex items-center gap-1 text-foreground">
+                <div className="flex items-center gap-1 text-[#1D4ED8]">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
                   ))}
@@ -101,7 +101,7 @@ const Testimonials = () => {
               </div>
               <p className="text-sm sm:text-base leading-relaxed text-foreground/90">{review.quote}</p>
               <div className="mt-6 pt-5 border-t border-border">
-                <p className="text-sm font-semibold text-foreground">{review.name}</p>
+                <p className="text-sm font-normal text-foreground">{review.name}</p>
                 <p className="text-xs text-muted-foreground mt-1">{review.role}</p>
               </div>
             </article>

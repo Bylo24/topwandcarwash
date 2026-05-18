@@ -13,10 +13,10 @@ import { Sparkles, Layers, Zap, Compass, Shield, Heart } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export const site = {
-  name: "Studio Name",
-  tagline: "A short, punchy tagline that explains what you do.",
+  name: "J. Grimm Contracting",
+  tagline: "Residential and commercial contracting in Edmonton.",
   description:
-    "Replace this with a one-sentence description of the business. Used in meta tags and the footer.",
+    "J. Grimm Contracting provides reliable residential and commercial contracting services in the Edmonton area.",
 
   nav: [
     { label: "Services", href: "#services" },
@@ -26,15 +26,15 @@ export const site = {
   ],
 
   cta: {
-    primary: { label: "Get Started", href: "#contact" },
+    primary: { label: "Get a Quote", href: "#contact" },
     secondary: { label: "Our Work", href: "#work" },
   },
 
   contact: {
-    phone: "+00 000 000 000",
-    phoneHref: "tel:+0000000000",
-    email: "hello@studio.com",
-    location: "City, Country",
+    phone: "",
+    phoneHref: "",
+    email: "",
+    location: "Edmonton, Alberta",
   },
 
   social: {
@@ -52,10 +52,10 @@ export const site = {
 
 export const hero = {
   eyebrow: site.tagline,
-  headline: "A bold headline that says exactly what you do.",
+  headline: "Contracting services for residential and commercial projects.",
   subhead:
-    "One or two sentences of supporting copy that sets the tone, builds trust, and invites the visitor to take the next step.",
-  trustSignals: ["Trust Signal One", "Trust Signal Two", "Trust Signal Three"],
+    "J. Grimm Contracting provides reliable solutions from renovations to new construction, with quality workmanship for every project.",
+  trustSignals: ["Residential Projects", "Commercial Work", "Edmonton Area"],
 } as const;
 
 export const services: {
@@ -65,64 +65,64 @@ export const services: {
   items: { num: string; icon: LucideIcon; title: string; description: string }[];
 } = {
   eyebrow: "What We Do",
-  heading: "A clear section heading.",
+  heading: "Contracting services in Edmonton.",
   intro:
-    "Use this paragraph to set context for the services below. Keep it short and benefit-focused.",
+    "Practical construction support for homeowners, property managers, and businesses.",
   items: [
-    { num: "01", icon: Sparkles, title: "Service One", description: "A short, benefit-led description of this offering." },
-    { num: "02", icon: Layers,   title: "Service Two", description: "Explain what the client gets and why it matters." },
-    { num: "03", icon: Zap,      title: "Service Three", description: "Keep copy tight. One or two clear sentences." },
-    { num: "04", icon: Compass,  title: "Service Four", description: "Speak to the outcome, not the process." },
-    { num: "05", icon: Shield,   title: "Service Five", description: "Use plain language that anyone can understand." },
-    { num: "06", icon: Heart,    title: "Service Six", description: "Close with the value the client walks away with." },
+    { num: "01", icon: Sparkles, title: "Residential Renovations", description: "Interior and exterior renovation work tailored to each property." },
+    { num: "02", icon: Layers,   title: "Commercial Projects", description: "Structural and interior contracting work for businesses and commercial spaces." },
+    { num: "03", icon: Zap,      title: "New Construction", description: "Construction support for new builds, additions, and property improvements." },
+    { num: "04", icon: Compass,  title: "Project Management", description: "Clear coordination across scope, schedule, trades, and site requirements." },
+    { num: "05", icon: Shield,   title: "Quality Workmanship", description: "Careful execution with attention to durability, finish, and details." },
+    { num: "06", icon: Heart,    title: "General Contracting", description: "Reliable contracting services for a range of residential and commercial needs." },
   ],
 };
 
 export const about = {
-  eyebrow: "Our Story",
-  heading: "A few words about us.",
+  eyebrow: "About Us",
+  heading: "J. Grimm Contracting.",
   paragraphs: [
-    "Use this paragraph to introduce the brand. Talk about the founding story, what drives the team, and what makes the approach different.",
-    "A second paragraph can deepen the narrative. Mention values, milestones, or the kind of clients you love working with.",
+    "J. Grimm Contracting is a reputable contracting business based in Edmonton, Alberta. The team offers professional construction solutions for residential and commercial clients.",
+    "With a focus on quality workmanship and customer satisfaction, every project is planned around the specific requirements and timelines of the client.",
   ],
   team: [
-    { name: "Team Member One", role: "Role Title", initials: "TO" },
-    { name: "Team Member Two", role: "Role Title", initials: "TT" },
+    { name: "Service Area", role: "Edmonton and surrounding communities", initials: "SA" },
+    { name: "Project Types", role: "Renovations and new construction", initials: "PT" },
   ],
 } as const;
 
 export const work = {
   eyebrow: "Selected Work",
-  heading: "Recent projects.",
-  intro: "A short line of context about the work below or a link to a fuller portfolio.",
+  heading: "Completed projects.",
+  intro: "A sample of residential and commercial contracting work.",
   projects: [
-    { title: "Project One",   category: "Category", href: "#" },
-    { title: "Project Two",   category: "Category", href: "#" },
-    { title: "Project Three", category: "Category", href: "#" },
+    { title: "Residential Renovation", category: "Residential", href: "#" },
+    { title: "Commercial Interior", category: "Commercial", href: "#" },
+    { title: "New Construction Support", category: "Construction", href: "#" },
   ],
 } as const;
 
 export const testimonials = {
   eyebrow: "Testimonials",
   heading: "What clients say.",
-  intro: "Real words from people we have worked with.",
+  intro: "Feedback from residential and commercial clients.",
   reviews: [
-    { name: "Client Name One",   role: "Role, Company", quote: "A short, glowing quote that feels real and specific to the work delivered." },
-    { name: "Client Name Two",   role: "Role, Company", quote: "Another testimonial that highlights a different angle of the value provided." },
-    { name: "Client Name Three", role: "Role, Company", quote: "Keep quotes between one and three sentences. Avoid generic adjectives." },
-    { name: "Client Name Four",  role: "Role, Company", quote: "A specific outcome or transformation makes a testimonial believable." },
-    { name: "Client Name Five",  role: "Role, Company", quote: "Vary the tone across reviews so the section does not read repetitively." },
-    { name: "Client Name Six",   role: "Role, Company", quote: "Close the set with a quote that invites the reader to take the next step." },
+    { name: "Local Business Owner", role: "Commercial Client", quote: "The project was handled professionally from start to finish, with clear communication throughout the work." },
+    { name: "Homeowner in Edmonton", role: "Residential Client", quote: "The team kept the renovation organized and delivered quality workmanship on the details that mattered." },
+    { name: "Property Manager", role: "Commercial Client", quote: "Reliable scheduling and practical problem solving made the construction process much easier to manage." },
+    { name: "Retail Manager", role: "Commercial Client", quote: "The finished space met our operational needs and the team was responsive throughout the project." },
+    { name: "Residential Client", role: "Home Renovation", quote: "They listened to the scope, respected the timeline, and produced a clean final result." },
+    { name: "Edmonton Resident", role: "Residential Client", quote: "A dependable contractor with strong attention to workmanship and communication." },
   ],
 } as const;
 
 export const ctaBand = {
-  heading: "Ready to start something great?",
-  subhead: "A short closing line that nudges the visitor to take the next step.",
+  heading: "Ready to discuss your project?",
+  subhead: "Reach out to J. Grimm Contracting for residential and commercial contracting work in Edmonton.",
 } as const;
 
 export const contact = {
   eyebrow: "Contact",
-  heading: "Let's talk.",
-  intro: "Send a message and we will get back to you within one business day.",
+  heading: "Get a quote.",
+  intro: "Send a message about your project requirements and the team will review the request.",
 } as const;

@@ -8,11 +8,13 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#005EC3] border-b border-white/15 shadow-[0_1px_0_rgba(0,0,0,0.08)]">
-      <div className="section-container flex items-center justify-between h-16 md:h-20">
+      <div className="section-container flex items-center justify-between h-20 md:h-24">
         <a href="/" className="flex items-center">
-          <span className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-sm bg-white p-1.5 shadow-[0_10px_24px_-16px_rgba(0,0,0,0.5)]">
-            <img src={logo} alt="Topwand Car and Truck Wash" className="h-full w-full object-contain" />
-          </span>
+          <img
+            src={logo}
+            alt="Topwand Car and Truck Wash"
+            className="h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 object-contain"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-10">

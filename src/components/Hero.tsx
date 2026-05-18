@@ -8,7 +8,7 @@ const directionsUrl =
 
 const Hero = () => {
   return (
-    <section className="relative isolate min-h-[76svh] lg:min-h-[72svh] flex items-end pt-24 sm:pt-28 md:pt-32 lg:pt-28 pb-14 md:pb-16 overflow-hidden bg-neutral-950">
+    <section className="relative isolate min-h-[82svh] lg:min-h-[78svh] flex items-end pt-40 sm:pt-44 md:pt-56 lg:pt-52 pb-14 md:pb-16 overflow-hidden bg-neutral-950">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <img
           src={heroImage}

@@ -8,12 +8,12 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#005EC3] border-b border-white/15 shadow-[0_1px_0_rgba(0,0,0,0.08)]">
-      <div className="section-container flex items-center justify-between h-20 md:h-24">
+      <div className="section-container flex items-center justify-between h-24 md:h-32">
         <a href="/" className="flex items-center">
           <img
             src={logo}
             alt="Topwand Car and Truck Wash"
-            className="h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 object-contain"
+            className="h-24 w-24 sm:h-28 sm:w-28 md:h-40 md:w-40 object-contain"
           />
         </a>
 
